@@ -1,1 +1,1 @@
-This is a simple code to load web view in Android
+This is simple code to load web view in Android
