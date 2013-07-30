@@ -1,2 +1,1 @@
-android-remove-white-screen-before-loading-webview
-==================================================
+This is a simple code to load web view in Android
