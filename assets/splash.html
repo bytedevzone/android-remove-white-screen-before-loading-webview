@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Android HTML SPLASH </title>
+    <style>
+        html,body{
+        height:100%;
+        font-size:100%;
+        background-color : #85502c;
+        }
+        h3{
+        color:#fff;
+        font-size:200%;
+        font-family: trebuchet ms;
+  	margin:0;
+        }
+        h4{
+        color:#a7a7a7;
+        font-size:120%;
+        font-family: Arial;
+		margin:0;
+        }
+		.meter { 
+			height: 20px;  /* Can be anything */
+			position: relative;
+			background: #555;
+			-moz-border-radius: 25px;
+			-webkit-border-radius: 25px;
+			border-radius: 25px;
+		}
+		.meter #mr {
+			display: block;
+			height: 100%;
+			position: absolute;
+		}.meter #mr span{
+			float:left;
+			height:100%;
+			width:10%;
+		}.meter #mr span.i1{
+			background:#54F054;
+			width:15%;
+		}
+    </style>
+
+
+</head>
+<body>
+
+<table width="100%" height="100%">
+    <tr>
+        <td valign="middle" align="center" id="test">
+            <h3>SPLASH</h3>
+            <h4>Loading...</h4>
+			<div class="meter animate">
+				<span id="mr" style="width: 10%">
+					<span class="i1"></span>
+					<span></span>
+					<span class="i1"></span>
+					<span></span>
+					<span class="i1"></span>
+					<span></span>
+					<span class="i1"></span>
+				</span>
+			</div>
+        </td>
+    </tr>
+</table>
+
+
+
+	<script type="text/javascript">
+	
+	// loading bar
+	var l = 2;
+	var mr = document.getElementById('mr');
+	loading();
+    function loading(){
+		setTimeout(loading, 100);
+		
+		if( l == 90 )
+			l = 0;
+			
+		l += 2;
+		mr.style.left = l+'%';
+	}
+	
+	//this function call from android 
+	//and redirected to index.html
+    function _fully_loaded(){
+
+
+	window.location.href = 'index.html';
+		
+    }
+	
+//_fully_loaded();
+
+</script>
+</body>
+</html>
